@@ -1,0 +1,42 @@
+{
+  "originHash" : "f1808f7ae69a465ef4630217e42e5cf34970e4514b9eb34ae2584c492dd4cebc",
+  "pins" : [
+    {
+      "identity" : "bluesocket",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/IBM-Swift/BlueSocket.git",
+      "state" : {
+        "revision" : "c9894fd117457f1d006575fbfb2fdfd6f79eac03",
+        "version" : "1.0.200"
+      }
+    },
+    {
+      "identity" : "coreswiftvisa",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SwiftVISA/CoreSwiftVISA.git",
+      "state" : {
+        "branch" : "actor",
+        "revision" : "229f53ba130653b4945188a94a0bbeea5d21ea6f"
+      }
+    },
+    {
+      "identity" : "seeayaui",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/seeaya/SeeayaUI.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "5e78b273becb70b88bd3fc3fe5e55d029e99befd"
+      }
+    },
+    {
+      "identity" : "swiftvisaswift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SwiftVISA/SwiftVISASwift.git",
+      "state" : {
+        "branch" : "actor",
+        "revision" : "1ccb532a7967fb0c37a503d2aa15f999991bae2d"
+      }
+    }
+  ],
+  "version" : 3
+}
