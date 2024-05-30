@@ -1,5 +1,5 @@
 {
-  "originHash" : "f1808f7ae69a465ef4630217e42e5cf34970e4514b9eb34ae2584c492dd4cebc",
+  "originHash" : "2ed6ee0af65c4a94c2ace3f70e6dee77e9e8596e209afd34f9123b3274054b78",
   "pins" : [
     {
       "identity" : "bluesocket",
@@ -20,6 +20,15 @@
       }
     },
     {
+      "identity" : "printercontroller",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/HildrethResearchGroup/PrinterController.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "7e072e2fc5ebc747eab18689268bb8885a6476d3"
+      }
+    },
+    {
       "identity" : "seeayaui",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/seeaya/SeeayaUI.git",
@@ -35,6 +44,15 @@
       "state" : {
         "branch" : "actor",
         "revision" : "1ccb532a7967fb0c37a503d2aa15f999991bae2d"
+      }
+    },
+    {
+      "identity" : "xpsq8kit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/HildrethResearchGroup/XPSQ8Kit.git",
+      "state" : {
+        "branch" : "actor",
+        "revision" : "c45c281d022720ea0537346780290d9a3e75c529"
       }
     }
   ],

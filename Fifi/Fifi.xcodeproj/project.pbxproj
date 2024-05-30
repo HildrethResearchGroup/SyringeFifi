@@ -39,6 +39,8 @@
 		5ADE4FEA27549A5100AC4505 /* WaitOperationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADE4FE927549A5100AC4505 /* WaitOperationView.swift */; };
 		5ADE4FEC27549AD100AC4505 /* MoveOperationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADE4FEB27549AD100AC4505 /* MoveOperationView.swift */; };
 		5ADE4FF02754A14000AC4505 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADE4FEF2754A14000AC4505 /* Model.swift */; };
+		AA786C912C08043000A38D99 /* XPSQ8Kit in Frameworks */ = {isa = PBXBuildFile; productRef = AA786C902C08043000A38D99 /* XPSQ8Kit */; };
+		AA786C942C08046E00A38D99 /* PrinterController in Frameworks */ = {isa = PBXBuildFile; productRef = AA786C932C08046E00A38D99 /* PrinterController */; };
 		C06E54B3283EBBD500A36145 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06E54AD283EBBD500A36145 /* CameraViewController.swift */; };
 		C06E54B4283EBBD500A36145 /* RecordingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06E54AE283EBBD500A36145 /* RecordingState.swift */; };
 		C06E54B5283EBBD500A36145 /* DeviceCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06E54AF283EBBD500A36145 /* DeviceCameraView.swift */; };
@@ -99,9 +101,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA786C912C08043000A38D99 /* XPSQ8Kit in Frameworks */,
 				5A28BCA42792154F00983D9A /* SwiftVISASwift in Frameworks */,
 				5A5B23FA26A8C2270079D7F9 /* SeeayaUI in Frameworks */,
 				5A1B639526A8FE90004C5348 /* PrinterController in Frameworks */,
+				AA786C942C08046E00A38D99 /* PrinterController in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +277,8 @@
 				5A5B23F926A8C2270079D7F9 /* SeeayaUI */,
 				5A1B639426A8FE90004C5348 /* PrinterController */,
 				5A28BCA32792154F00983D9A /* SwiftVISASwift */,
+				AA786C902C08043000A38D99 /* XPSQ8Kit */,
+				AA786C932C08046E00A38D99 /* PrinterController */,
 			);
 			productName = Fifi;
 			productReference = 5AAF5019267BD388002A58B5 /* Fifi.app */;
@@ -305,6 +311,8 @@
 			packageReferences = (
 				5A5B23F826A8C2270079D7F9 /* XCRemoteSwiftPackageReference "SeeayaUI" */,
 				5A28BCA22792154F00983D9A /* XCRemoteSwiftPackageReference "SwiftVISASwift" */,
+				AA786C8F2C08043000A38D99 /* XCRemoteSwiftPackageReference "XPSQ8Kit" */,
+				AA786C922C08046E00A38D99 /* XCRemoteSwiftPackageReference "PrinterController" */,
 			);
 			productRefGroup = 5AAF501A267BD388002A58B5 /* Products */;
 			projectDirPath = "";
@@ -601,6 +609,22 @@
 				kind = branch;
 			};
 		};
+		AA786C8F2C08043000A38D99 /* XCRemoteSwiftPackageReference "XPSQ8Kit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/HildrethResearchGroup/XPSQ8Kit.git";
+			requirement = {
+				branch = actor;
+				kind = branch;
+			};
+		};
+		AA786C922C08046E00A38D99 /* XCRemoteSwiftPackageReference "PrinterController" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/HildrethResearchGroup/PrinterController.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -617,6 +641,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 5A5B23F826A8C2270079D7F9 /* XCRemoteSwiftPackageReference "SeeayaUI" */;
 			productName = SeeayaUI;
+		};
+		AA786C902C08043000A38D99 /* XPSQ8Kit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AA786C8F2C08043000A38D99 /* XCRemoteSwiftPackageReference "XPSQ8Kit" */;
+			productName = XPSQ8Kit;
+		};
+		AA786C932C08046E00A38D99 /* PrinterController */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AA786C922C08046E00A38D99 /* XCRemoteSwiftPackageReference "PrinterController" */;
+			productName = PrinterController;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
