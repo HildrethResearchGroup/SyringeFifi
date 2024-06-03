@@ -1,6 +1,24 @@
 import SwiftUI
 import PrinterController
 
+struct CustomVerticalDivider: View {
+    let width: CGFloat
+    let height: CGFloat
+    let color: Color
+    
+    init(width: CGFloat = 1, height: CGFloat = 140, color: Color = .gray) {
+        self.width = width
+        self.height = height
+        self.color = color
+    }
+    
+    var body: some View {
+        Rectangle()
+            .fill(color)
+            .frame(width: width, height: height)
+    }
+}
+
 struct SyringePumpSettingsOperationView: View {
     @Binding var configuration: SyringePumpSettingsConfiguration
     @ObservedObject var controller = SyringePumpController()
@@ -10,6 +28,30 @@ struct SyringePumpSettingsOperationView: View {
 
     var body: some View {
         VStack {
+            Text("Syringe Pump Network").font(.title2).padding(.top, 30)
+            
+            HStack {
+                Text("Port")
+                Button(action: { controller.connectOrDisconnect() }) {
+                    Text(controller.nextPortState)
+                }
+                Toggle(isOn: Binding(
+                    get: { self.controller.nextPumpState == .stopPumping1 && self.controller.nextPumpState2 == .stopPumping2 },
+                    set: { value in
+                        if value {
+                            self.controller.startOrStopPumping1(pump: "00")
+                            self.controller.startOrStopPumping2(pump: "01")
+                        } else {
+                            self.controller.stopPumping1(pump: "00")
+                            self.controller.stopPumping2(pump: "01")
+                        }
+                    }
+                )) {
+                    Text(self.controller.nextPumpState == .startPumping1 && self.controller.nextPumpState2 == .startPumping2 ? "Start Both Pumps" : "Stop Both Pumps")
+                }
+                .toggleStyle(SwitchToggleStyle(tint: .blue))
+            }
+            
             HStack {
                 VStack {
                     Text("Syringe Pump 1").font(.title2).padding(.top, -5)
@@ -38,7 +80,7 @@ struct SyringePumpSettingsOperationView: View {
                         .toggleStyle(SwitchToggleStyle(tint: .blue))
                     }
                 }
-                CustomVerticalDivider(width: 1, height: 140, color: .gray)
+                CustomVerticalDivider()
                 VStack {
                     Text("Syringe Pump 2").font(.title2).padding(.top, -5)
                     Form {
@@ -69,11 +111,6 @@ struct SyringePumpSettingsOperationView: View {
             }
         }
     }
-}
-
-// MARK: - Helpers
-private extension SyringePumpSettingsOperationView {
-    // Helper methods for managing the configuration state can be added here if needed
 }
 
 // MARK: - Previews

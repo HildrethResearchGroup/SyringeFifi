@@ -1,5 +1,5 @@
 {
-  "originHash" : "b28a5e58fa545a49b3ba3d03ae515de0cae1c66758a30021d9c5f1f610725f7d",
+  "originHash" : "62996f994f20c82d6ec7cbcc1cf671a46786830bfb1d583a4eeff1454849625b",
   "pins" : [
     {
       "identity" : "bluesocket",
@@ -20,12 +20,12 @@
       }
     },
     {
-      "identity" : "printercontroller",
+      "identity" : "printersyringepumpcontroller",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/HildrethResearchGroup/PrinterController.git",
+      "location" : "https://github.com/HildrethResearchGroup/PrinterSyringePumpController.git",
       "state" : {
         "branch" : "main",
-        "revision" : "7e072e2fc5ebc747eab18689268bb8885a6476d3"
+        "revision" : "38f32af05599752624cf7fcbb4a491619803c579"
       }
     },
     {
