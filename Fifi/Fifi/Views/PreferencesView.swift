@@ -18,6 +18,10 @@ struct PreferencesView: View {
     @AppStorage("multimeterAddress") private var multimeterAddress = "0.0.0.0"
     @AppStorage("multimeterPort") private var multimeterPort = 0
     
+    //added for syringe pump
+    @AppStorage("syringePumpAddress") private var syringePumpAddress = "0.0.0.0"
+    @AppStorage("syringePumpPort") private var syringePumpPort = 0
+    
     var body: some View {
         VStack {
             connectionPreferences(named: "XPS-Q8",
@@ -35,6 +39,13 @@ struct PreferencesView: View {
             connectionPreferences(named: "Multimeter",
                                   address: $multimeterAddress,
                                   port: $multimeterPort)
+            
+            //added for syringe pump
+            Divider()
+            
+            connectionPreferences(named: "Syringe Pump",
+                                  address: $syringePumpAddress,
+                                  port: $syringePumpPort)
         }
         .padding()
     }

@@ -18,7 +18,10 @@ struct ContentView: View {
     @AppStorage("xpsq8Port") private var xpsq8Port = 0
     @AppStorage("multimeterAddress") private var multimeterAddress = "0.0.0.0"
     @AppStorage("multimeterPort") private var multimeterPort = 0
-    
+    //added for syringe pump
+    @AppStorage("syringePumpAddress") private var syringePumpAddress = "0.0.0.0"
+    @AppStorage("syringePumpPort") private var syringePumpPort = 0
+
     @ObservedObject private var logger = Fifi.logger
     
     var body: some View {
@@ -142,6 +145,18 @@ private extension ContentView {
         }
         .help(helpForInstrument(named: "XPS-Q8",
                                 state: printerController.xpsq8ConnectionState))
+        
+        //added for syringe pump
+        Button {
+            syringePumpAction()
+        } label: {
+            Image(systemName: "syringe.fill")
+                .foregroundColor(printerController.syringePumpConnectionState.color)
+        }
+        .help(helpForInstrument(named: "Syringe Pump",
+                                state: printerController.syringePumpConnectionState))
+        
+        
     }
     
     func helpForInstrument(named name: String, state: CommunicationState) -> String {
@@ -265,6 +280,35 @@ private extension ContentView {
                     logger.info("Initialized multimeter")
                 } errorString: { error in
                     "Could not initialize multimeter: \(error)"
+                }
+            }
+        default:
+            break
+        }
+    }
+    
+    //added for syringe pump
+    func syringePumpAction() {
+        switch printerController.syringePumpConnectionState {
+        case .notConnected:
+            Task {
+                logger.info("Connecting to Syringe Pump at \(syringePumpAddress)::\(syringePumpPort)")
+                let configuration = syringePumpConfiguration(address: syringePumpAddress, port: syringePumpPort)
+                await logger.tryOrError {
+                    try await printerController.connectToSyringePump(configuration: configuration)
+                    logger.info("Connected to Syringe Pump at \(syringePumpAddress)::\(syringePumpPort)")
+                } errorString: { error in
+                    "Could not connect to Syringe Pump: \(error)"
+                }
+            }
+        case .notInitialized:
+            Task {
+                logger.info("Initializing Syringe Pump")
+                await logger.tryOrError {
+                    try await printerController.initializeSyringePump()
+                    logger.info("Initialized Syringe Pump")
+                } errorString: { error in
+                    "Could not initialize Syringe Pump: \(error)"
                 }
             }
         default:

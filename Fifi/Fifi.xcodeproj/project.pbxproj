@@ -41,6 +41,7 @@
 		5ADE4FF02754A14000AC4505 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADE4FEF2754A14000AC4505 /* Model.swift */; };
 		AA786C912C08043000A38D99 /* XPSQ8Kit in Frameworks */ = {isa = PBXBuildFile; productRef = AA786C902C08043000A38D99 /* XPSQ8Kit */; };
 		AA786C942C08046E00A38D99 /* PrinterController in Frameworks */ = {isa = PBXBuildFile; productRef = AA786C932C08046E00A38D99 /* PrinterController */; };
+		AA786C962C0A394500A38D99 /* SyringePumpSettingsOperationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA786C952C0A394500A38D99 /* SyringePumpSettingsOperationView.swift */; };
 		C06E54B3283EBBD500A36145 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06E54AD283EBBD500A36145 /* CameraViewController.swift */; };
 		C06E54B4283EBBD500A36145 /* RecordingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06E54AE283EBBD500A36145 /* RecordingState.swift */; };
 		C06E54B5283EBBD500A36145 /* DeviceCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06E54AF283EBBD500A36145 /* DeviceCameraView.swift */; };
@@ -87,6 +88,7 @@
 		5ADE4FE927549A5100AC4505 /* WaitOperationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitOperationView.swift; sourceTree = "<group>"; };
 		5ADE4FEB27549AD100AC4505 /* MoveOperationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveOperationView.swift; sourceTree = "<group>"; };
 		5ADE4FEF2754A14000AC4505 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		AA786C952C0A394500A38D99 /* SyringePumpSettingsOperationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyringePumpSettingsOperationView.swift; sourceTree = "<group>"; };
 		C06E54AD283EBBD500A36145 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		C06E54AE283EBBD500A36145 /* RecordingState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordingState.swift; sourceTree = "<group>"; };
 		C06E54AF283EBBD500A36145 /* DeviceCameraView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceCameraView.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 				5ADE4FEB27549AD100AC4505 /* MoveOperationView.swift */,
 				5ABFD55627140E2200FADA22 /* CommentOperationView.swift */,
 				5A1489DC27D8A8BB0055D22B /* GapHeightCalibrateOperationView.swift */,
+				AA786C952C0A394500A38D99 /* SyringePumpSettingsOperationView.swift */,
 			);
 			path = OperationViews;
 			sourceTree = "<group>";
@@ -353,6 +356,7 @@
 				5A4D3BD726E92DDC00664B46 /* OperationView.swift in Sources */,
 				C06E54B5283EBBD500A36145 /* DeviceCameraView.swift in Sources */,
 				5ABFD55727140E2200FADA22 /* CommentOperationView.swift in Sources */,
+				AA786C962C0A394500A38D99 /* SyringePumpSettingsOperationView.swift in Sources */,
 				5A1489DF27D8AD120055D22B /* ManualMultimeterView.swift in Sources */,
 				5ADE4FEA27549A5100AC4505 /* WaitOperationView.swift in Sources */,
 				5A08511A279B41930043E1BA /* PrintLineOperationView.swift in Sources */,
